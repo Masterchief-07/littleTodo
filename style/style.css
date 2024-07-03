@@ -71,11 +71,3 @@ button{
     cursor: pointer;
     color: inherit;
 }
-
-a {
-    color: var(--clr-rose);
-}
-
-strong {
-    color: var(--clr-indigo);
-}
