@@ -44,10 +44,11 @@ ul li{
 }
 
 ul li::before{
-    border: 1px solid var(--primary-200);
+    /* border: 1px solid var(--primary-200); */
     position: absolute;
     content: '';
     background: url('/check.svg') no-repeat;
+    filter: invert(100%);
     /* background-color: #fff; */
     border-radius: 50%;
     /* color: #fff; */
@@ -55,6 +56,15 @@ ul li::before{
     height: 20px;
     top: 0;
     left: 0;
+}
+ul li:hover::after{
+    position: absolute;
+    content: '';
+    background: url('/cancel.svg') no-repeat;
+    filter: invert(100%);
+    width: 20px;
+    height: 20px;
+    right: 0;
 }
 
 .done{
