@@ -48,7 +48,7 @@ ul li::before{
     border-radius: 50%;
     width: 20px;
     height: 20px;
-    top: 1px;
+    top: 3px;
     left: 0;
 }
 ul li:hover::after{
@@ -71,7 +71,7 @@ ul li:hover::after{
 }
 
 ul li:not(:last-child){
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 @media (min-width: 475px) {
