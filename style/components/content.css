@@ -1,13 +1,12 @@
 .content{
     display: flex;
     flex-direction: column;
-    /* background-color: var(--bg-300); */
-    /* align-items: center; */
-    /* text-align: left; */
-    margin-top: 3rem;
+    margin-top: 1rem;
     padding: 2rem;
-    height: 70vh;
-    width: 100%;
+    gap: 1rem;
+    /* max-height: 70vh; */
+    /* width: 100%; */
+    /* border: 1px solid red; */
 }
 
 h1 {
@@ -16,13 +15,12 @@ h1 {
 }
 
 .add_text{
+    width: 100%;
     display: flex;
     gap: 0.1rem;
-    /* border: 1px solid red; */
-    /* position: relative; */
 }
 input{
-    /* position: absolute; */
+    font-size: var(--size-sm);
     margin: 0;
     padding: 0, 0.1rem;
     flex: 1;
@@ -37,24 +35,20 @@ ul {
 }
 
 ul li{
-    /* border: 1px solid red; */
     font-size: var(--size-sm);
     position: relative;
     padding-left: 30px;
+    max-width: 33rem;
 }
 
 ul li::before{
-    /* border: 1px solid var(--primary-200); */
+    border: 1px solid var(--primary-200);
     position: absolute;
     content: '';
-    background: url('/check.svg') no-repeat;
-    filter: invert(100%);
-    /* background-color: #fff; */
     border-radius: 50%;
-    /* color: #fff; */
     width: 20px;
     height: 20px;
-    top: 0;
+    top: 1px;
     left: 0;
 }
 ul li:hover::after{
@@ -64,6 +58,7 @@ ul li:hover::after{
     filter: invert(100%);
     width: 20px;
     height: 20px;
+    top: 3px;
     right: 0;
 }
 
@@ -71,9 +66,73 @@ ul li:hover::after{
     text-decoration: line-through;
 }
 .done::before {
+    background: url('/check.svg') no-repeat;
     background-color: var(--primary-200);
 }
 
 ul li:not(:last-child){
     margin-bottom: 0.5rem;
+}
+
+@media (min-width: 475px) {
+    h1 {
+        font-size: var(--size-3xl);
+    }
+    input{
+        font-size: var(--size-base);
+    }
+    ul li{
+        font-size: var(--size-base);
+    }
+}
+@media (min-width: 640px) {
+    .add_text{
+        max-width: 35rem;
+    }
+    h1 {
+        font-size: var(--size-4xl);
+    }
+    input{
+        font-size: var(--size-lg);
+    }
+    ul li{
+        font-size: var(--size-lg);
+    }
+
+}
+@media (min-width: 768px) {
+    .content{
+        margin-top: 2rem;
+    }
+
+}
+@media (min-width: 1024px) {
+    h1 {
+        font-size: var(--size-5xl);
+    }
+    input{
+        font-size: var(--size-xl);
+    }
+    ul li{
+        font-size: var(--size-xl);
+    }
+
+}
+@media (min-width: 1280px) {
+    .content{
+        margin-top: 4rem;
+    }
+    h1 {
+        font-size: var(--size-6xl);
+    }
+    input{
+        font-size: var(--size-2xl);
+    }
+    ul li{
+        font-size: var(--size-2xl);
+    }
+
+}
+@media (min-width: 1536px) {
+
 }
