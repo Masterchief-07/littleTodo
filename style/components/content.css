@@ -39,6 +39,11 @@ ul li{
     position: relative;
     padding-left: 30px;
     max-width: 33rem;
+
+    /* border: 1px solid red; */
+}
+ul li:hover{
+    cursor: pointer;
 }
 
 ul li::before{
@@ -48,18 +53,26 @@ ul li::before{
     border-radius: 50%;
     width: 20px;
     height: 20px;
-    top: 3px;
+    top: 6px;
     left: 0;
 }
-ul li:hover::after{
+
+ul li span{
+    display: none;
+}
+
+ul li:hover span{
+    display: inline;
+    color: var(--accent-100);
     position: absolute;
-    content: '';
-    background: url('/cancel.svg') no-repeat;
-    filter: invert(100%);
+    right: 0;
+    top: 3px;
     width: 20px;
     height: 20px;
-    top: 3px;
-    right: 0;
+}
+
+ul li span:hover{
+    color: var(--primary-200);
 }
 
 .done{
